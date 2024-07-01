@@ -193,7 +193,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 Yan Zhang - - yanyzhang1@gmail.com
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
+Project Link: [https://github.com/github_username/repo_name](https://github.com/yanyzhang/djtododir)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
