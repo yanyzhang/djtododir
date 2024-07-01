@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure--a+rpkbb)p6y=0h8j0ldom1i*2hmy#*l0hl9#e_99vb&&=_ege
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['mytodolist.onrender.com']
+ALLOWED_HOSTS = ['mytodolist.onrender.com', '127.0.0.1', 'localhost', '127.0.0.1:8000']
 
 
 # Application definition
@@ -86,7 +86,7 @@ DATABASES = {
     # }
         'default': dj_database_url.config(
         # Replace this value with your local database's connection string.
-        default='postgresql://postgres:password@localhost:5432/djtododir',
+        default='postgresql://postgres:groe46disc@localhost:5432/djtododir',
         conn_max_age=600
     )
 }
