@@ -82,15 +82,15 @@ ASGI_APPLICATION = 'mytodolist.asgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': BASE_DIR / 'db.sqlite3',
-    # }
-        'default': dj_database_url.config(
-        # Replace this value with your local database's connection string.
-        default='postgresql://postgres:groe46disc@localhost:5432/djtododir',
-        conn_max_age=600
-    )
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+    #     'default': dj_database_url.config(
+    #     # Replace this value with your local database's connection string.
+    #     default='postgresql://postgres:password@localhost:5432/djtododir',
+    #     conn_max_age=600
+    # )
 }
 
 
