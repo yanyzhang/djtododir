@@ -12,7 +12,7 @@
     />
   </head>
   <body>
-    <div class="box text-center">
+    <div class="box container-sm text-center">
       <div class="container" style="background: none;">
         <div class="todoheading">
           <h1>ToDo List</h1>
@@ -24,17 +24,17 @@
             class="col"
           >
             {% csrf_token %}
-            <div class="row">
-              <div class="col-md-8 entertask ">{{form.text}}</div>
-              <div class="col col-lg-4 justify-content-md-center">
-                <div class="col px-4">
-                  <div class="col-10 p-1">{{ form.date }}</div>
-                  <div class="col-10 p-1">{{ form.time }}</div> 
-                </div>
+            <div class="row justify-content-center">
+              <div class="col-12 col-md-8 entertask mb-3">{{form.text}}</div>
+              <div class="col-12 col-lg-4 datetime d-flex justify-content-center flex-column">
+                <!-- <div class="col px-4"> -->
+                  <div class="col-12 px-4 mb-2">{{ form.date }}</div>
+                  <div class="col-12 px-4">{{ form.time }}</div> 
+                <!-- </div> -->
                 <br />
               </div>
             </div>
-
+<br />
             <div class="col-12 text-center">
               <button class="addbtn">Add Task</button>
             </div>
@@ -44,47 +44,55 @@
       
       <!-- this is the task list section -->
       <div class="container container-fluid">
-        <div class="row justify-content-end" style="padding: 10px;">
-          <form action="{% url 'delete_completed' %}" method="POST" class="col col-3">
-            {% csrf_token %}
-            <button type="submit" class="deletebtn delete1 text-primary">Delete Completed Task</button>
-        </form>
-        <form action="{% url 'show_delete_all_modal' %}" method="POST" class="col col-2">
-            {% csrf_token %}
-            <button type="submit" 
-            class="deletebtn deleteall text-danger" 
-            data-toggle="modal" 
-            data-target="#confirmDeleteModal">Delete All Tasks</button>
-        </form>
-        </div>
-        <br />
-        <div class="row justify-content-center px-5 py-3">
-          {% for i in todo_items %}
-          <div class="col-sm-4 card-container">
-            <div
-              class="card mb-4"
-              style="max-width: 18rem; background: {% if i.completed %}#fcfefe{% else %}#deecfc{% endif %}; border: {% if i.completed %}{% else %}none{% endif %}; color: {% if i.completed %}gray{% else %}black{% endif %};"
-            >
-              <div
-                class="card-header"
-                style="font-weight: bold; background: {% if i.completed %}#e3e3e3{% else %}#b9ceeb{% endif %};"
-              >
-                <span>{{ i.date }}</span>
-                <span>{{ i.time }}</span>
-              </div>
-              <div class="card-body" style="height: 8rem;">
-                {% if i.completed %}
-                <a class="card-title completedtask">{{i.text}}</a>
-                {% else %}
-                <a href="{% url 'completed' i.id %}" title="Click to Delete Task" style="text-decoration:none">
-                  <div class="card-content taskstyle">{{i.text}}</div>
-                </a>
-                {% endif %}
-              </div>
+        <div class="deletetask">
+          <div class="row justify-content-center" style="padding: 10px;">
+            <div class="col-auto p-2">
+              <form action="{% url 'delete_completed' %}" method="POST" class="col col-3">
+                {% csrf_token %}
+                <button type="submit" class="deletebtn delete1 text-primary">Delete Completed Task</button>
+              </form>
+            </div>
+            <div class="col-auto p-2">
+              <form action="{% url 'show_delete_all_modal' %}" method="POST" class="col col-2">
+                  {% csrf_token %}
+                  <button type="submit" 
+                  class="deletebtn deleteall text-danger" 
+                  data-toggle="modal" 
+                  data-target="#confirmDeleteModal">Delete All Tasks</button>
+              </form>
             </div>
           </div>
-          {% endfor %}
-        
+        </div>
+        <br />
+        <div class="container" style="">
+          <div class="row justify-content-center card-container-outer">
+            {% for i in todo_items %}
+            <div class="col-lg-4 col-md-6 col-sm-12 card-container">
+              <div
+                class="card mb-4"
+                style="max-width: 18rem; background: {% if i.completed %}#fcfefe{% else %}#deecfc{% endif %}; border: {% if i.completed %}{% else %}none{% endif %}; color: {% if i.completed %}gray{% else %}black{% endif %};"
+              >
+                <div
+                  class="card-header"
+                  style="font-weight: bold; background: {% if i.completed %}#e3e3e3{% else %}#b9ceeb{% endif %};"
+                >
+                  <span>{{ i.date }}</span>
+                  <span>{{ i.time }}</span>
+                </div>
+                <div class="card-body" style="height: 8rem;">
+                  {% if i.completed %}
+                  <a class="card-title completedtask">{{i.text}}</a>
+                  {% else %}
+                  <a href="{% url 'completed' i.id %}" title="Click to Delete Task" style="text-decoration:none">
+                    <div class="card-content taskstyle">{{i.text}}</div>
+                  </a>
+                  {% endif %}
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          
+        </div>
       </div>
     </div>
     </div>

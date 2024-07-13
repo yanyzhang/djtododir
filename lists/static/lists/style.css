@@ -1,12 +1,58 @@
 body {
     background: linear-gradient(109.6deg, rgb(220, 196, 252) 11.2%, rgb(150, 199, 253) 100.2%);
     height: 100vh;
+    min-width: 300px;
 
 }
 
 .box {
     margin-top: 20px;
 }
+
+@media screen and (max-width: 992px) {
+    .datetime {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    input[type=date], input[type=time] {
+        width: 200px;
+        margin: 0 auto;
+    }
+
+    .deletetask {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding-top: 20px;
+
+    }
+    .deletetask .row {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .deletebtn {
+        width: 200px;
+    }
+
+    .card-container {
+        flex: 0 0 50%; /* Two cards per row */
+        max-width: 50%;
+      }
+
+ }
+
+ @media screen and (max-width: 768px) {
+    .card-container {
+        flex: 0 0 100%;/* One card per row */
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+ }
+
 
 
 .todoheading {
@@ -55,6 +101,11 @@ input[type="text"]:focus {
     box-shadow: 0 0 0 1px #dddddd, 0 2px 4px 0 rgb(0 0 0 / 7%), 0 1px 1.5px 0 rgb(0 0 0 / 5%);
 }
 
+.deletetask {
+    white-space: nowrap;
+    min-width: auto;
+}
+
 .deletebtn {
     border: 2px solid white;
     font-weight: 500;
@@ -72,6 +123,7 @@ input[type="text"]:focus {
 
 .card {
     box-shadow: 4px 2px 20px rgba(0, 0, 0, 0.2);
+    
 }
 
 
