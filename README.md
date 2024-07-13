@@ -29,8 +29,8 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/github_username/repo_name">
-    <img src="../djtododir/media/images/Logo.jpg" alt="Logo" width="80" height="80">
+  <a href="../djtododir/media/images/Logo.jpg">
+    <img src="../djtododir/media/images/Logo.jpg" alt="Logo" width="80" height="30">
   </a>
 
 <h3 align="center">ToDo List</h3>
@@ -41,8 +41,8 @@
     <a href="https://github.com/yanyzhang/djtododir"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://mytodolist-darb.onrender.com/">View Demo</a>
-    ·
+    <a href="https://mytodolist-darb.onrender.com/">View Demo: See App on Render</a>
+    
 <!--     <a href="https://github.com/github_username/repo_name/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
     ·
     <a href="https://github.com/github_username/repo_name/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a> -->
@@ -81,14 +81,21 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://github.com/yanyzhang/djtododir/blob/main/media/images/ToDo%20List%20Web%20App.jpg)
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
+<!-- Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description` -->
+
+This is simple to do task web app with inputs and views. Users can select future date and time or simply hit enter to post tasks. To delete a specific task, just click on the task itself, the task card will then be grayed out.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Built With
 
 - [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-- [![JQuery][JQuery.com]][JQuery-url]
+- [![Jinja][Jinja.com]][Jinja-url]
+- [![Django][Django.com]][Django-url]
+- [![SQLite][SQLite.org]][SQLite-url]
+- [![Python][Python.org]][Python-url]
+- [![CSS][CSS.Tutorial]][CSS-url]
+- [![HTML][HTML.Tutorial]][HTML-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -96,7 +103,9 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
+Simply open the web page and start entering and deleting tasks.
+
+<!-- This is an example of how you may give instructions on setting up your project locally.
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
@@ -122,7 +131,7 @@ This is an example of how to list things you need to use the software and how to
 4. Enter your API in `config.js`
    ```js
    const API_KEY = "ENTER YOUR API";
-   ```
+   ``` -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -130,9 +139,11 @@ This is an example of how to list things you need to use the software and how to
 
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+Click on task itself to delete.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+<!-- Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+
+_For more examples, please refer to the [Documentation](https://example.com)_ -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -180,7 +191,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 Yan Zhang - - yanyzhang1@gmail.com
 
-Project Link: [https://github.com/github_username/repo_name](https://github.com/yanyzhang/djtododir)
+Project Link: [https://github.com/yanyzhang/djtododir](https://github.com/yanyzhang/djtododir)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -208,7 +219,7 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 [license-shield]: https://img.shields.io/github/license/github_username/repo_name.svg?style=for-the-badge
 [license-url]: https://github.com/github_username/repo_name/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/linkedin_username
+[linkedin-url]: https://www.linkedin.com/in/yanzhang2013/
 [product-screenshot]: ../djtododir/media/images/ToDo%20List%20Web%20App.jpg
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
@@ -226,3 +237,15 @@ Project Link: [https://github.com/github_username/repo_name](https://github.com/
 [Bootstrap-url]: https://getbootstrap.com
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
 [JQuery-url]: https://jquery.com
+[Jinja.com]: https://img.shields.io/badge/Jinja-darkred?style=for-the-badge&link=https%3A%2F%2Fjinja.palletsprojects.com%2Fen%2F3.1.x%2F
+[Jinja-url]: https://jinja.palletsprojects.com/en/3.1.x/
+[Django.com]: https://www.djangoproject.com/m/img/badges/djangosite100x25.gif
+[Django-url]: https://www.djangoproject.com/
+[SQLite.org]: https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white
+[SQLite-url]: https://www.sqlite.org/
+[python.org]: https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white
+[python-url]: https://www.python.org/
+[CSS.Tutorial]: https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white
+[CSS-url]: https://www.w3schools.com/css/
+[HTML.Tutorial]: https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white
+[HTML-url]: https://www.w3schools.com/html/
